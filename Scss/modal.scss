@@ -1,0 +1,52 @@
+@import 'colors.scss';
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1010000000;
+    left: auto;
+    top: auto;
+    width: fit-content;
+    max-width: 45%;
+    min-height: 20%;
+    max-height: 80%;
+    overflow: auto;
+    border-radius: 1%;
+    background: lighten(mix($secondary-color, $Primary-color, .3),  90%);
+     box-shadow: 0 -5px 15px $secondary-color;
+     &>.header-Content{
+         display: inline;
+             display: flex;
+             flex-flow: column;
+             text-align: center !important;
+                 border-bottom: solid lighten(($Primary-color),70%);
+                 padding: 8px 5px 5px 13px;
+     }
+    &>.modal-content{
+        margin: 4% auto;
+        padding: 20px;
+        border: .1px solid  lighten($text-color,80%);
+        width: fit-content;
+        font-size: smaller;
+        font-family: cursive;
+        
+    }
+
+}
+.close{
+    color: $dangerp;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        // border: .1px solid $Primary-color;
+        border-radius: 23px;
+        width: 1em;
+        height: 1em;
+        // margin: .5em !important;
+        text-align: center;
+     &:hover,:focus{
+         color: $text-color;
+         text-decoration: none;
+         cursor: pointer;
+     }
+}

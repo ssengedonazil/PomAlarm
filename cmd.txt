@@ -1,0 +1,54 @@
+@echo off
+:TOP
+PathDir\program.exe
+ping 127.0.0.1 -n 3
+taskkill /im program.exe /f
+goto :TOP
+//////////-//
+:START
+REM Execute the MS-DOS dir command ever 20 seconds.
+dir
+SLEEP 20
+GOTO END
+
+////
+
+@ECHO OFF
+set IPADDRESS=x.x.x.x
+set INTERVAL=240
+:PINGINTERVAL
+ping %IPADDRESS% -t >> ping_stats.txt
+timeout %INTERVAL%
+GOTO PINGINTERVAL
+
+
+
+
+
+more D:/mavinComputerlogs/pom.txt  reads all content in file
+
+
+for /F "tokens=*" %A in  (D:\mavinComputerlogs\pom.txt) do (
+ECHO Processing %A....
+CALL %A ARG1
+)
+
+---START of MyScript.bat---
+@echo off
+for /F "tokens=*" %%A in  ( D:/mavinComputerlogs/pom.txt ) do  (
+   ECHO Processing %%A.... 
+   CALL %%A ARG1 
+)
+@echo on
+;---END of MyScript.bat---
+
+
+
+FOR /F "tokens=1,2,3 delims=," %%G IN (weather.txt) DO @echo %%G %%I
+FOR /F %i  IN (D:\mavinComputerlogs\pom.txt) DO (ECHO %i )
+
+
+sc.exe
+ sc query type diver
+
+ net

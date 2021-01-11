@@ -1,0 +1,18 @@
+"" 
+===================================="08/01/2021"============================
+detail={"Name":"dcsdcs","Email":"", "PWD":"","time":"13:50:03.79"}
+` Pease We Have a new system log in   
+===================================="08/01/2021"============================
+ECHO is off.
+detail={"Name":"sdcsdc","Email":"sdcsdc", "PWD":"sdcs","time":"13:50:10.57"}
+` Pease We Have a new system log in   
+===================================="08/01/2021"============================
+ECHO is off.
+` Pease We Have a new system log in   
+===================================="08/01/2021"============================
+ECHO is off.
+detail={"Name":"dcdcs","Email":"scdcs", "PWD":"dcsd","time":"13:51:09.17"}
+` Pease We Have a new system log in   
+===================================="08/01/2021"============================
+ECHO is off.
+detail={"Name":"dscsd","Email":"csdc", "PWD":"sdcsdc","time":"13:51:46.02"}

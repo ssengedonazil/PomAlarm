@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100Vh;
+  background: #091921;
+}
+
+.clock {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 350px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  background: url(../Images/image2.png) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 -5px 15px #e8e1e2, inset 0 -15px 15px #e8e1e2, 0 -5px 15px rgba(0, 0, 0, 0.5), inset 0 -15px 15px black;
+          box-shadow: 0 -5px 15px #e8e1e2, inset 0 -15px 15px #e8e1e2, 0 -5px 15px rgba(0, 0, 0, 0.5), inset 0 -15px 15px black;
+}
+
+.clock:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #0f0f10;
+  border-radius: 50%;
+  z-index: 100000;
+}
+
+.clock .hour, .clock .min, .clock .Sec {
+  position: absolute;
+}
+
+.clock .hour, .clock .hr {
+  width: 160px;
+  height: 160px;
+}
+
+.clock .mn, .clock .min {
+  width: 190px;
+  height: 190px;
+}
+
+.clock .Sec, .clock .sc {
+  width: 230px;
+  height: 230px;
+}
+
+.setAlarm {
+  z-index: 1000;
+  content: "||";
+  border-radius: 3px;
+  border: none;
+  color: #e8e1e2;
+  opacity: .8;
+}
+
+.setAlarm > .setAlarmBtn {
+  background: #faf8f8 !important;
+  width: 1.2em;
+  height: 1.3em;
+  border: none;
+  z-index: 1;
+  border-right: solid 1px black;
+  border-radius: 1px 11px 11px 3px;
+  -webkit-box-shadow: 0 -5px 15px #e8e1e2, inset 0 -15px 15px #f8fbfd, 0 -5px 15px rgba(191, 186, 186, 0.5);
+          box-shadow: 0 -5px 15px #e8e1e2, inset 0 -15px 15px #f8fbfd, 0 -5px 15px rgba(191, 186, 186, 0.5);
+}
+
+.setAlarm > .setAlarmBtn:focus {
+  border: none !important;
+}
+
+.hr, .mn, .sc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.sc:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #8f6e73;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100px;
+  background: black;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+.hr:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #f479a0;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.form-contentClock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-contentClock > textarea {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: black 2px solid;
+  position: relative;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: MoveUp;
+          animation-name: MoveUp;
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+  font-weight: 500;
+}
+
+.form-contentClock > textarea:placeholder-shown {
+  border-bottom: #404045;
+}
+
+.form-contentClock > textarea:not(:placeholder-shown) {
+  background-color: #f2f2f3;
+  border-bottom: #0d2531;
+}
+
+.form-contentClock > textarea:focus {
+  border-bottom: white;
+  border: none;
+}
+
+.SchedulList {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -ms-grid;
+  display: grid;
+  border-bottom: #727279 solid 1.5px;
+  -ms-grid-columns: 1fr 50px;
+      grid-template-columns: 1fr 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 3.4px;
+          column-gap: 3.4px;
+  row-gap: 2%;
+  grid-row-gap: 2;
+  grid-auto-flow: row;
+  grid-column-gap: 2;
+}
+
+.SchedulList > .AlarmDiscription {
+  word-break: break-all;
+}
+
+.SchedulList > .scdu {
+  padding: 0 2px 0 60%;
+}
+
+.SchedulList > .scdu > * {
+  margin: auto;
+  background: #3592c1;
+  width: 1.4em;
+}
+
+.CreateTheEventsContainer {
+  width: 100%;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0.5em auto;
+}
+
+.CreateTheEventsContainer > button, .CreateTheEventsContainer > * > button {
+  width: 1.6em;
+  background: #3592c1;
+  border: none;
+  margin: auto;
+  border-radius: 53%;
+  cursor: pointer;
+}
+
+.CreateTheEventsContainer > button:hover, .CreateTheEventsContainer > * > button:hover {
+  width: 2.1em;
+  border: 2px solid #163d51;
+  -webkit-transition-delay: 10ms;
+          transition-delay: 10ms;
+  -webkit-animation-delay: 4ms;
+          animation-delay: 4ms;
+  background: #d0e7f2;
+}
+
+.inlineFormate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  overflow: auto;
+}
+
+.inlineFormate > * > select {
+  cursor: pointer;
+  border: none;
+  margin: 1px;
+  border-bottom: #e8e1e2 1px solid;
+}
+
+.inlineFormate > * > select > * {
+  border: none;
+  background: #f8fbfd;
+}
+
+.inlineFormate > * > select > *:hover {
+  background: #f8fbfd;
+}
+
+.inlineFormate > * > select:hover, .inlineFormate > * > select :focus {
+  border-bottom: black 2px solid;
+  position: relative;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: MoveUp;
+          animation-name: MoveUp;
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+  font-weight: 500;
+}
+
+@-webkit-keyframes MoveUp {
+  from {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  45% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    bottom: .4em;
+  }
+}
+
+@keyframes MoveUp {
+  from {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  45% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    bottom: .4em;
+  }
+}
+
+@media (max-width: 450px) {
+  .inlineFormate {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
